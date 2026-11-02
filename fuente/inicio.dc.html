@@ -35,11 +35,12 @@ a{color:#2E4539}a:hover{color:#7A5636}
 @media (prefers-reduced-motion:reduce){.fog,.r1,.r2,.r3,.m1,.m2,.water,.sway,.bar,.path,.pin{animation:none}.fog{opacity:0}}
 .pf-foto{position:absolute;inset:0;background:url(img/img-a76d20c3.jpg) center 72%/cover;filter:saturate(.82)}
 .pf-velo{position:absolute;inset:0;background:linear-gradient(90deg,rgba(46,69,57,.86),rgba(46,69,57,.12) 68%)}
-.nb{position:absolute;left:0;bottom:-6%;width:calc(100% + 1400px);height:65%;background:url(img/neblina.png) 0 0/1400px 100% repeat-x;opacity:.34;pointer-events:none;-webkit-mask-image:linear-gradient(transparent,#000 45%);mask-image:linear-gradient(transparent,#000 45%);animation:nbmov 70s linear infinite}
-.nb2{height:42%;opacity:.28;animation-duration:42s;animation-direction:reverse}
+.nb{position:absolute;left:0;bottom:-6%;width:calc(100% + 1400px);height:65%;background:url(img/neblina.png) 0 0/1400px 100% repeat-x;pointer-events:none;-webkit-mask-image:linear-gradient(transparent,#000 45%);mask-image:linear-gradient(transparent,#000 45%);animation:nbmov 34s linear infinite,nbresp 8s ease-in-out infinite alternate}
+.nb2{height:42%;animation-duration:21s,6s;animation-direction:reverse,alternate}
 @keyframes nbmov{to{transform:translateX(-1400px)}}
+@keyframes nbresp{from{opacity:.24}to{opacity:.46}}
 @media (max-width:720px){.pf-velo{background:rgba(46,69,57,.68)}}
-@media (prefers-reduced-motion:reduce){.nb{animation:none}}
+@media (prefers-reduced-motion:reduce){.nb{animation:none;opacity:.32}}
 </style>
 </helmet>
 <div style="position: relative; font-family: 'Work Sans', system-ui, sans-serif; color: #2E4539; background: #F4F1EA; overflow: hidden">
