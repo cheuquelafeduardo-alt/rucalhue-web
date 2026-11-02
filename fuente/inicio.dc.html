@@ -33,6 +33,13 @@ a{color:#2E4539}a:hover{color:#7A5636}
 .pin{transform-box:fill-box;transform-origin:center;animation:pinp 2.6s ease-out infinite}
 .path{stroke-dasharray:1600;animation:dash 4s .4s cubic-bezier(.3,.6,.2,1) both}
 @media (prefers-reduced-motion:reduce){.fog,.r1,.r2,.r3,.m1,.m2,.water,.sway,.bar,.path,.pin{animation:none}.fog{opacity:0}}
+.pf-foto{position:absolute;inset:0;background:url(img/img-a76d20c3.jpg) center 72%/cover;filter:saturate(.82)}
+.pf-velo{position:absolute;inset:0;background:linear-gradient(90deg,rgba(46,69,57,.86),rgba(46,69,57,.12) 68%)}
+.nb{position:absolute;left:0;bottom:-6%;width:calc(100% + 1400px);height:65%;background:url(img/neblina.png) 0 0/1400px 100% repeat-x;opacity:.34;pointer-events:none;-webkit-mask-image:linear-gradient(transparent,#000 45%);mask-image:linear-gradient(transparent,#000 45%);animation:nbmov 70s linear infinite}
+.nb2{height:42%;opacity:.28;animation-duration:42s;animation-direction:reverse}
+@keyframes nbmov{to{transform:translateX(-1400px)}}
+@media (max-width:720px){.pf-velo{background:rgba(46,69,57,.68)}}
+@media (prefers-reduced-motion:reduce){.nb{animation:none}}
 </style>
 </helmet>
 <div style="position: relative; font-family: 'Work Sans', system-ui, sans-serif; color: #2E4539; background: #F4F1EA; overflow: hidden">
@@ -58,34 +65,25 @@ a{color:#2E4539}a:hover{color:#7A5636}
       </nav>
     </header>
 
-    <div style="position: relative; width: 100%; max-width: 1360px; margin: 0 auto; padding: 56px 40px 0; box-sizing: border-box">
-      <p class="r1" style="margin: 0 0 22px; font-size: 13px; letter-spacing: .3em; font-weight: 600; color: #4E604F">ARQUITECTURA EN FUTALEUFÚ · 10 AÑOS</p>
+    <!-- Foto de obra con filtro de marca y neblina -->
+    <div style="position: relative; overflow: hidden; display: flex; align-items: center; min-height: max(620px, calc(100vh - 96px)); color: #F4F1EA">
+      <div class="pf-foto" aria-hidden="true"></div>
+      <div class="pf-velo" aria-hidden="true"></div>
+      <div class="nb nb1" aria-hidden="true"></div>
+      <div class="nb nb2" aria-hidden="true"></div>
+    <div style="position: relative; width: 100%; max-width: 1360px; margin: 0 auto; padding: 56px 40px; box-sizing: border-box">
+      <p class="r1" style="margin: 0 0 22px; font-size: 13px; letter-spacing: .3em; font-weight: 600; color: #F4F1EA">ARQUITECTURA EN FUTALEUFÚ · 10 AÑOS</p>
       <h1 class="r1" style="margin: 0; max-width: 820px; font-family: Newsreader, serif; font-weight: 300; font-size: clamp(46px, 6.4vw, 92px); line-height: .98; letter-spacing: -.02em">Construye en el sur sin perderte en los trámites.</h1>
-      <p class="r2" style="margin: 26px 0 0; max-width: 560px; font-size: 19px; line-height: 1.6; color: #2E4539">Diseñamos tu casa y la acompañamos del terreno a la recepción final, pensada para la lluvia, la nieve y el viento de Futaleufú.</p>
+      <p class="r2" style="margin: 26px 0 0; max-width: 560px; font-size: 19px; line-height: 1.6; color: #F4F1EA">Diseñamos tu casa y la acompañamos del terreno a la recepción final, pensada para la lluvia, la nieve y el viento de Futaleufú.</p>
       <div class="r3" style="display: flex; flex-wrap: wrap; gap: 22px; align-items: center; margin-top: 36px">
-        <a href="#cotiza" style="display: inline-flex; align-items: center; min-height: 56px; padding: 0 32px; background: #2E4539; color: #F4F1EA; text-decoration: none; font-weight: 600; font-size: 16px">Cotiza en 2 minutos</a>
-        <a href="#camino" style="font-size: 15px; font-weight: 500">Ver el camino de 7 pasos →</a>
+        <a href="#cotiza" style="display: inline-flex; align-items: center; min-height: 56px; padding: 0 32px; background: #F4F1EA; color: #2E4539; text-decoration: none; font-weight: 600; font-size: 16px">Cotiza en 2 minutos</a>
+        <a href="#camino" style="font-size: 15px; font-weight: 500; color: #F4F1EA">Ver el camino de 7 pasos →</a>
       </div>
       <div class="r3" style="display: flex; align-items: center; gap: 12px; margin-top: 28px">
         <div aria-hidden="true" style="display: flex"><span style="width: 28px; height: 28px; border-radius: 50%; background: #2E4539; border: 2px solid #E6E4DC"></span><span style="width: 28px; height: 28px; border-radius: 50%; background: #B68B6A; border: 2px solid #E6E4DC; margin-left: -8px"></span><span style="width: 28px; height: 28px; border-radius: 50%; background: #6B7F6A; border: 2px solid #E6E4DC; margin-left: -8px"></span></div>
         <p style="margin: 0; font-size: 15px"><strong>246 familias y negocios</strong> ya construyeron con nosotros</p>
       </div>
     </div>
-
-    <!-- Paisaje: valle de Futaleufú (estilo facetado) -->
-    <div style="position: relative; width: 100%; max-width: 1440px; margin: 24px auto 0; aspect-ratio: 1200 / 896; max-height: 900px; min-height: 340px">
-      <svg role="img" aria-label="Ilustración del valle de Futaleufú: la cordillera nevada, el pueblo junto a la laguna, el rodeo y el bosque" viewBox="0 0 1200 896" preserveAspectRatio="xMidYMid slice" style="position: absolute; inset: 0; width: 100%; height: 100%">
-        <image href="img/valle-futaleufu.webp" x="0" y="0" width="1200" height="896"></image>
-        <a href="#oficina" aria-label="Ver cómo llegar a la oficina">
-          <circle class="pin" cx="840" cy="420" r="12" fill="#2E4539" opacity=".5"></circle>
-          <path d="M840 436 C831 425 826 418 826 411 A14 14 0 0 1 854 411 C854 418 849 425 840 436Z" fill="#2E4539" stroke="#F4F1EA" stroke-width="2"></path>
-          <path d="M834 413 L840 407 L846 413 L846 418 L834 418Z" fill="#F4F1EA"></path>
-          <rect x="862" y="392" width="146" height="28" rx="2" fill="#2E4539"></rect>
-          <text x="874" y="411" fill="#F4F1EA" font-family="Work Sans" font-size="14" font-weight="600">Rucalhue · aquí</text>
-        </a>
-      </svg>
-      <div class="m1" aria-hidden="true" style="position: absolute; left: -12%; top: 38%; width: 80%; height: 40%; background: radial-gradient(ellipse at center, rgba(244,241,234,.7), rgba(244,241,234,0) 65%)"></div>
-      <div class="m2" aria-hidden="true" style="position: absolute; right: -15%; top: 55%; width: 70%; height: 34%; background: radial-gradient(ellipse at center, rgba(244,241,234,.55), rgba(244,241,234,0) 65%)"></div>
     </div>
   </section>
 
